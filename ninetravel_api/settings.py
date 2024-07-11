@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#206ac=x=mmugsfio_fal532g7xy%0#s^#u_f&e2573sw1*^ms
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["gabrielbosio.pythonanywhere.com"]
 
 
 # Application definition
@@ -83,21 +83,14 @@ WSGI_APPLICATION = 'ninetravel_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-""" DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-} """
-
 
 DATABASES = {
     "default" :{
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "reserva_db",
-        "USER": "root",
+        "NAME": "gabrielbosio$reserva_db",
+        "USER": "gabrielbosio",
         "PASSWORD": "ninetravel",
-        "HOST": "127.0.0.1",
+        "HOST": "gabrielbosio.mysql.pythonanywhere-services.com",
         "PORT": "3306",
     }
 }
@@ -144,7 +137,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://localhost:8000',
